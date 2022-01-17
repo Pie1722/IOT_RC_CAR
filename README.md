@@ -1,3 +1,7 @@
+# IOT_RC_CAR
+
+This is a car controlled by mobile via through esp-12E. This car uses tb6612fng dual motor driver to controll rotation direction and pwm too.
+
 # HOME PAGES_PHOTOS
 
 ![DROID](https://user-images.githubusercontent.com/86643678/128638180-c97163fe-964f-4fa1-8319-3b1164c95e34.jpg)
