@@ -1,10 +1,10 @@
 /* IOT_RC_CAR_V1
- * By A3V3   
+ * By Pie   
  * aravindvallab@protonmail.com
  
    MIT License
 
-   Copyright (c) 2021 a3v3
+   Copyright (c) 2021 Pie
 
    Permission is hereby granted, free of charge, to any person obtaining a copy
    of this software and associated documentation files (the "Software"), to deal
