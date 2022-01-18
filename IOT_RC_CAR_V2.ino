@@ -72,9 +72,9 @@ Serial.println('\n');
 
 // Connecting WiFi
 
-wifiMulti.addAP("Saji", "SamsungM11");              // Wi-Fi networks you want to connect to.
-wifiMulti.addAP("Vallab", "Panasonic");
-wifiMulti.addAP("Ashwin", "Ashwin99");
+wifiMulti.addAP("ssid", "password");              // Wi-Fi networks you want to connect to. It will conect to the strongest network availaible
+wifiMulti.addAP("----", "----");
+wifiMulti.addAP("----", "----");
 
 con();                                             //Con function is at the bottom after 'void loop(){.......}'
  
