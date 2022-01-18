@@ -70,8 +70,10 @@ ESP8266WebServer server(80);                      // Create a webserver object t
 const int led_pin = 15;
 //-----------------------------------------------------------------------------
 
-char ssid[] = "Saji";
-char pass[] = "SamsungM11";
+// For BLYNK connection --------------------
+char ssid[] = "ssid";
+char pass[] = "password";
+--------------------------------------------
 
 // HTML Error Pages .  HTML code was converted too suppord to arduino ide by this site ( https://davidjwatts.com/youtube/esp8266/esp-convertHTM.html# )
 
@@ -424,7 +426,7 @@ void espCon() {                                                      //ESP CONNE
   server.begin();                                                     // Actually start the server
   Serial.println("HTTP server started");
 
-  //OTA -------
+  //ArduinoOTA -------
 
   ArduinoOTA.setHostname("Pie");
   ArduinoOTA.setPassword("147258");
