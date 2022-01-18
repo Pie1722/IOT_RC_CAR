@@ -73,12 +73,17 @@ const int led_pin = 15;
 char ssid[] = "Saji";
 char pass[] = "SamsungM11";
 
+// HTML Error Pages .  HTML code was converted too suppord to arduino ide by this site ( https://davidjwatts.com/youtube/esp8266/esp-convertHTM.html# )
+
 String html_303 = "<!DOCTYPE html> <html> <head> </head> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> <!-- Add icon library --> <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\"> <style> body { background-image: url('https://user-images.githubusercontent.com/86643678/127834328-d48cde57-797c-4b74-a2cc-0cc850c02f78.png'); background-size: contain; background-repeat: no-repeat; background-attachment: fixed; background-position: center;} p{{text-align: left;}; } .button { border-radius: 10px; background-color: black; border:2px solid #d1fd1f; color: #FFFFFF; text-align: center; font-size: 20px; padding: 10px; width: 150px; transition: all 0.5s; cursor: pointer; margin: 0px; } .button span { cursor: pointer; display: inline-block; position: relative; transition: 0.5s; } .button span:after { content: '\\00bb'; position: absolute; opacity: 0; top: 0; right: -20px; transition: 0.5s; } .button:hover span { padding-right: 16px; } .button:hover span:after { opacity: 1; right: 0; } .btn { background-color: black; border: none; border-radius: 200px; color: white; padding: 12px 15px; font-size: 20px; cursor: pointer; text-align: center; position: relative; /* Adjust these values accordingly */ top: 5px; left: 5px; display: flex; } .btn:hover { background-color:royalblue ; } </style> <body> <h3>(>‿◠)✌️Let's get you back!</h3> <form action=\"http://192.168.247.106/\" method=\\\"get\\\" target=\\\"_blank\\\"> <button class=\"button\"><span>HOME</span></button> </form> <form action=\"https://github.com/HyperArx\\\" method=\\\"get\\\" target=\\\"_blank\\\"> <button class=\"btn\"><i class=\"fa fa-github\"> </form> </body> </html>";
 String html_404 = "<!DOCTYPE html> <html> <head> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> <!-- Add icon library --> <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\"> <style> body {background-image: url('https://user-images.githubusercontent.com/86643678/127807009-082c3f5e-4249-4d11-b52e-6b2db776adf6.png'); background-size: contain; background-repeat: no-repeat; background-attachment: fixed; background-position: center;}. p{{text-align: left;}; } .btn { background-color: black; border: none; border-radius: 200px; color: white; padding: 12px 15px; font-size: 20px; cursor: pointer; text-align: center; display: flex; position: fixed; /* Adjust these values accordingly */ top: 40px; left: 10px; } .btn:hover { background-color:royalblue ; } </style> <body> <P>GITHUB</p> <form action=\"https://github.com/HyperArx\\\" method=\\\"get\\\" target=\\\"_blank\\\"> <button class=\"btn\"><i class=\"fa fa-github\"> </form> </body> </html>";
 String html_400 = "<!DOCTYPE html> <html> <head> </head> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> <!-- Add icon library --> <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\"> <style> body { background-image: url('https://user-images.githubusercontent.com/86643678/127808081-8d811eb0-94b5-4dbd-86d2-a403f29a827d.jpg'); background-size: contain; background-repeat: no-repeat; background-attachment: fixed; background-position: center; } p{{text-align: left;}; } .button { border-radius: 10px; background-color: black; border:2px solid #d1fd1f; color: #FFFFFF; text-align: center; font-size: 20px; padding: 10px; width: 150px; transition: all 0.5s; cursor: pointer; margin: 0px; } .button span { cursor: pointer; display: inline-block; position: relative; transition: 0.5s; } .button span:after { content: '\\00bb'; position: absolute; opacity: 0; top: 0; right: -20px; transition: 0.5s; } .button:hover span { padding-right: 16px; } .button:hover span:after { opacity: 1; right: 0; } .btn { background-color: black; border: none; border-radius: 200px; color: white; padding: 12px 15px; font-size: 20px; cursor: pointer; text-align: center; display: flex; position: relative; /* Adjust these values accordingly */ top: 5px; left: 5px; } .btn:hover { background-color:royalblue ; } </style> <body> <h3>(>‿◠)✌️Let's get you back!</h3> <form action=\"http://192.168.247.106/\" method=\\\"get\\\" target=\\\"_blank\\\"> <button class=\"button\"><span>HOME</span></button> </form> <form action=\"https://github.com/HyperArx\\\" method=\\\"get\\\" target=\\\"_blank\\\"> <button class=\"btn\"><i class=\"fa fa-github\"> </form> </body> </html>";
 String html_500 = "<!DOCTYPE html> <html> <head> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> <!-- Add icon library --> <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\"> <style> body {background-image: url('https://user-images.githubusercontent.com/86643678/127810603-a2d89e3c-878f-41f0-8679-bd3eb76ddb1a.png'); background-size: contain; background-repeat: no-repeat; background-attachment: fixed; background-position: center;}. p{{text-align: left;}; } .btn { background-color: black; border: none; border-radius: 200px; color: white; padding: 12px 15px; font-size: 20px; cursor: pointer; text-align: center; display: flex; position: fixed; /* Adjust these values accordingly */ top: 40px; left: 10px; } .btn:hover { background-color:royalblue ; } </style> <body> <P>GITHUB</p> <form action=\"https://github.com/HyperArx\\\" method=\\\"get\\\" target=\\\"_blank\\\"> <button class=\"btn\"><i class=\"fa fa-github\"> </form> </body> </html>";
 
 String html_home = "<!DOCTYPE html><html><head><style>body {background-image: url('https://user-images.githubusercontent.com/86643678/128638180-c97163fe-964f-4fa1-8319-3b1164c95e34.jpg'); background-size: contain;background-repeat: no-repeat;background-attachment: fixed;background-position: center;}.button {border: none;padding: 12px 40px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;}.button1 {background-color: black; color: white; border: 3px solid #d1fd1f;border-radius: 16px}body {text-align: center;}</style></head><body><h2>Robot prototype V3</h2><p>by- HYPERARX</p><form action=\"/LED\" method=\"POST\"><button class=\"button button1\">Toggle Led!</button></form>";
+
+-------------------------------------------------------------------------------
+   
 boolean led_state = false;
 
 // function prototypes for HTTP handlers
@@ -88,7 +93,7 @@ void handleLED();
 void handleNotFound();
 //-----------------------------------------------------------------------------
 
-char auth[] = " wI-L5h_qk0cLsrvUH8Rs9jlbS2nqYcDl ";
+char auth[] = " Write Your Auth Code ";            // Auth code given by BLYNK
 
 //-----------------------------------------------------------------------------
 
@@ -119,9 +124,9 @@ void setup() {
   // Add the wifi networks name and password you want ESP-01 to connect to. E.g: wifiMulti.addAP("HOME_WIFI", "504682@#$");
   // You may add or comment out number of networks you want ESP-01 to connect to.
 
-  wifiMulti.addAP("Saji", "SamsungM11");             // Wi-Fi networks you want to connect to.
-  wifiMulti.addAP("Ashwin","Ashwin99"); 
-  wifiMulti.addAP("Vallab", "Panasonic"); 
+  wifiMulti.addAP("Ssid", "Password");             // Wi-Fi networks you want to connect to.
+  wifiMulti.addAP("----", "---");                  // It will connect to the strongest Network 
+  wifiMulti.addAP("----", "---"); 
   espCon();                                          //Connect function (espCon) is at the bottom after 'void loop(){.......}'
 
 }
