@@ -257,6 +257,7 @@ void loop(void) {
   Blynk.run();
 
   if (wifiMulti.run() != WL_CONNECTED) {                               //If rc car is not connected it will call "con" function.
+    stopRobot();
     Serial.println(" Oops! You are disconnected (°╭╮°) Wait!\n");
     delay(200);
     Serial.println(" Reconnecting ..... ");
