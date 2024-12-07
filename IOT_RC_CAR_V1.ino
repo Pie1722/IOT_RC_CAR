@@ -1,6 +1,5 @@
 /* IOT_RC_CAR_V1
  * By Pie   
- * aravindvallab@protonmail.com
  
    MIT License
 
